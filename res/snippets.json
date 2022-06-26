@@ -1,0 +1,170 @@
+{
+  "print": {
+    "body": "System.out.println($\"Hello World!\"$);",
+    "description": "\"Log output to console\""
+  },
+  "C": {
+    "body": "java.util.concurrent.Callable<$RET$> callable = new java.util.concurrent.Callable<$RET$>() {\n  public $RET$ call() throws Exception {\n    $SELECTION$\n    $END$ \n  }\n};",
+    "description": "Surround with Callable"
+  },
+  "fori": {
+    "body": "for(int $INDEX$ = 0; $INDEX$ < $LIMIT$; $INDEX$++) {\n  $END$\n}",
+    "description": "Create iteration loop"
+  },
+  "geti": {
+    "body": "public static $CLASS_NAME$ getInstance() {\n  return $VALUE$;\n}",
+    "description": "Inserts singleton method getInstance"
+  },
+  "I": {
+    "body": "for ($ELEMENT_TYPE$ $VAR$ : $SELECTION$) {\n  $END$\n}\n",
+    "description": "Iterate Iterable | Array"
+  },
+  "ifn": {
+    "body": "if ($VAR$ == null) {\n$END$\n}",
+    "description": "Inserts 'if null' statement"
+  },
+  "inn": {
+    "body": "if ($VAR$ != null) {\n$END$\n}",
+    "description": "Inserts 'if not null' statement"
+  },
+  "inst": {
+    "body": "if ($EXPR$ instanceof $TYPE$) {\n  $TYPE$ $VAR1$ = ($TYPE$)$EXPR$;\n  $END$\n}",
+    "description": "Checks object type with instanceof and down-casts it"
+  },
+  "itar": {
+    "body": "for(int $INDEX$ = 0; $INDEX$ < $ARRAY$.length; $INDEX$++) {\n  $ELEMENT_TYPE$ $VAR$ = $ARRAY$[$INDEX$];\n  $END$\n}",
+    "description": "Iterate elements of array"
+  },
+  "itco": {
+    "body": "for($ITER_TYPE$ $ITER$ = $COLLECTION$.iterator(); $ITER$.hasNext(); ) {\n  $ELEMENT_TYPE$ $VAR$ =$CAST$ $ITER$.next();\n  $END$\n}",
+    "description": "Iterate elements of java.util.Collection"
+  },
+  "iten": {
+    "body": "while($ENUM$.hasMoreElements()){\n  $TYPE$ $VAR$ = $CAST$ $ENUM$.nextElement();\n  $END$\n}",
+    "description": "Iterate java.util.Enumeration"
+  },
+  "iter": {
+    "body": "for ($ELEMENT_TYPE$ $VAR$ : $ITERABLE_TYPE$) {\n  $END$\n}",
+    "description": "Iterate Iterable | Array"
+  },
+  "itit": {
+    "body": "while($ITER$.hasNext()){\n  $TYPE$ $VAR$ = $CAST$ $ITER$.next();\n  $END$\n}",
+    "description": "Iterate java.util.Iterator"
+  },
+  "itli": {
+    "body": "for (int $INDEX$ = 0; $INDEX$ < $LIST$.size(); $INDEX$++) {\n  $ELEMENT_TYPE$ $VAR$ = $CAST$ $LIST$.get($INDEX$);\n  $END$\n}",
+    "description": "Iterate elements of java.util.List"
+  },
+  "ittok": {
+    "body": "for (java.util.StringTokenizer $TOKENIZER$ = new java.util.StringTokenizer($STRING$); $TOKENIZER$.hasMoreTokens(); ) {\n    String $VAR$ = $TOKENIZER_COPY$.nextToken();\n    $END$\n}\n",
+    "description": "Iterate tokens from String"
+  },
+  "lazy": {
+    "body": "if ($VAR$ == null) {\n  $VAR$ = new $TYPE$($END$);\n}",
+    "description": "Performs lazy initialization"
+  },
+  "lst": {
+    "body": "$ARRAY$[$ARRAY$.length - 1]",
+    "description": "Fetches last element of an array"
+  },
+  "main": {
+    "body": "public static void main(String[] args){\n  $END$\n}",
+    "description": "main() method declaration"
+  },
+  "mn": {
+    "body": "$VAR$ = Math.min($VAR$, $END$);",
+    "description": "Sets lesser value to a variable"
+  },
+  "mx": {
+    "body": "$VAR$ = Math.max($VAR$, $END$);",
+    "description": "Sets greater value to a variable"
+  },
+  "prsf": {
+    "body": "private static final ",
+    "description": "private static final"
+  },
+  "psf": {
+    "body": "public static final ",
+    "description": "public static final"
+  },
+  "psfi": {
+    "body": "public static final int ",
+    "description": "public static final int"
+  },
+  "psfs": {
+    "body": "public static final String ",
+    "description": "public static final String"
+  },
+  "psvm": {
+    "body": "public static void main(String[] args){\n  $END$\n}",
+    "description": "main() method declaration"
+  },
+  "ritar": {
+    "body": "for(int $INDEX$ = $ARRAY$.length - 1; $INDEX$ >= 0; $INDEX$--) {\n  $ELEMENT_TYPE$ $VAR$ = $ARRAY$[$INDEX$];\n  $END$\n}",
+    "description": "Iterate elements of array in reverse order"
+  },
+  "RL": {
+    "body": "$LOCK$.readLock().lock();\ntry { \n  $SELECTION$\n} finally {\n  $LOCK$.readLock().unlock();\n}\n",
+    "description": "Surround with ReadWriteLock.readLock"
+  },
+  "serr": {
+    "body": "System.err.println($END$);",
+    "description": "Prints a string to System.err"
+  },
+  "serrc": {
+    "body": "System.err::println",
+    "description": "System.err::println"
+  },
+  "souf": {
+    "body": "System.out.printf(\"$END$\");",
+    "description": "Prints a formatted string to System.out"
+  },
+  "sout": {
+    "body": "System.out.println($END$);",
+    "description": "Prints a string to System.out"
+  },
+  "soutc": {
+    "body": "System.out::println",
+    "description": "System.out::println"
+  },
+  "soutm": {
+    "body": "System.out.println(\"$CLASS_NAME$.$METHOD_NAME$\");",
+    "description": "Prints current class and method names to System.out"
+  },
+  "soutp": {
+    "body": "System.out.println($FORMAT$);",
+    "description": "Prints method parameter names and values to System.out"
+  },
+  "soutv": {
+    "body": "System.out.println(\"$EXPR_COPY$ = \" + $EXPR$);",
+    "description": "Prints a value to System.out"
+  },
+  "St": {
+    "body": "String ",
+    "description": "String"
+  },
+  "thr": {
+    "body": "throw new ",
+    "description": "throw new"
+  },
+  "toar": {
+    "body": "$COLLECTION$.toArray(new $COMPONENT_TYPE$[$COLLECTION$.size()])$END$",
+    "description": "Stores elements of java.util.Collection into array"
+  },
+  "WL": {
+    "body": "$LOCK$.writeLock().lock();\ntry { \n  $SELECTION$\n} finally {\n  $LOCK$.writeLock().unlock();\n}\n",
+    "description": "Surround with ReadWriteLock.writeLock"
+  },
+  "T": {
+    "body": "<$TAG$>$SELECTION$</$TAGNAME$>",
+    "description": "This is a generic tag for html which can be changed to suit the user"
+  },
+  "test": {
+    "description": "This is a test snippet",
+    "body": "Hello World"
+  },
+  "TestSyntax": {
+    "description": "TestingSyntax",
+    "body": "Private\nPrint \nIf \nElse\nMain\nString\nInt "
+  }
+}
